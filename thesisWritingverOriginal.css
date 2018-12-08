@@ -1,0 +1,531 @@
+/*responsive site css*/
+/*remove unncessary bits, tidy code and alphabetize*/
+
+/*Stylesheet for printmode*/
+@media print {
+	@page {
+   		size: A4 portrait;
+		margin-top: 2cm;
+    	margin-bottom: 2cm;
+   	 	margin-left: 2cm;
+    	margin-right: 2cm;
+		}
+	header nav, ul.sidenav, footer, {
+		display: none;
+		}
+	img {
+		max-width: 500px;
+		}
+	a {
+		color: #000;　/*sets hyperlinks to black*/
+		}
+	div.content {
+    	margin: none;
+   		padding: 1px 16px;
+    	height: 1000px;
+		}
+	.outcome, .activity, .resource, .readingText, .motivation, .review   {
+		font-style: normal;
+		} 
+/*end of classes for etext*/
+}
+
+/*JSquizCodeActually*/
+#quizmain {
+width: 80%;
+max-width: 950px;
+border: 1px gray solid;
+margin: auto;
+padding: 10px;
+background-color: white;
+border-radius: 10px;
+}
+label {
+display: block;
+}
+
+input {
+width: 30px;
+margin-left: 20px;
+}
+
+h2 {
+clear: both;
+padding-top: 20px;
+}
+#quizheader {
+margin-top: 0;
+border: 2px solid black;
+padding: 5px;
+height: 250px;
+background: beige;
+background-image: url("");
+color: white;
+}
+/*quiz css*/
+p.question {
+    font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
+    font-size:10pt;
+  color: black;
+  margin-bottom:0px;
+}
+
+/*h2.quizHeader {
+  font-family: Arial, sans-serif;
+  font-weight:normal;
+  font-size:25px;
+  line-height: 27px;
+  margin: 24px 0 12px 0;
+  padding: 0 0 4px 0;
+  border-bottom: 1px solid #a2a2a2;
+}*/
+
+h2.quizScore{
+  font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
+  font-size:20px;
+}
+
+div.quizAnswers{
+  font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
+  font-size:12px;
+  color: black;
+  padding: 3px 0 3px 0;
+}
+
+label {
+  font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
+  font-size:12px;
+  color: black;
+  vertical-align:top;
+}
+
+input.answer[type="radio"] {
+  margin-bottom: 10px;
+}
+
+input.quizSubmit[type="submit"] {
+  -webkit-background-clip: border-box;
+  -webkit-background-origin: padding-box;
+  -webkit-background-size: auto;
+  -webkit-transition-delay: 0s, 0s;
+  -webkit-transition-duration: 0.2s, 0.2s;
+  -webkit-transition-property: color, background-color;
+  -webkit-transition-timing-function: ease, ease;
+  box-shadow: rgba(0, 0, 0, 0.498039) 0px 0px 5px 0px;
+  color: #ffffff;
+  background-color: #c30b0a;
+  margin: 0;
+  border: 0;
+  outline: 0;
+  text-transform:uppercase;
+  height:35px;
+  width:85px;
+  border: 1px solid #5E5E5E;
+  border-radius:5px;
+  
+ }
+
+input.quizSubmit[type="submit"]:hover {
+  color: #ffffff;
+  background: #680f11;
+  text-decoration: none;
+}
+
+
+.submitter {
+	  width:85px;
+}
+
+.hide {
+	  display:none;
+}
+/*stack divs vertically*/
+div
+{
+    display : block;
+}
+
+/*classes for etext*/
+.instruction {
+	font-style: italic;
+}
+.outcome {
+	font-style: normal;
+	background-color: beige;
+} 
+.activity {
+	font-style: normal;
+}
+.criteria {
+		font-style: normal;
+		background-color: #fffdd0; /*cream*/
+}
+
+.resource {
+		font-style: normal;
+	background-color: #caf6ca; /*light green*/
+	} 
+.readingText {
+		font-style: normal;
+	background-color: #caf6ca; /*light green*/
+	} 
+.motivation {
+		font-style: normal;
+	background-color: 	#B0E0E6; /*powder blue*/
+	}
+.review {
+		font-style: normal;
+	background-color: #fdfdab; /*light yellow*/
+	}
+/*end of classes for etext*/
+
+/*table - quiz*/
+.quizTable {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    table-layout: auto;
+	cursor: pointer;
+    width: 100%; 
+}
+
+.quizTable  td {
+    padding: 1px;
+}
+
+.quizTable  tr:hover {background-color: #ddd;}
+
+}
+/*end of table css*/
+/*table - non-academic*/
+.webTable {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    table-layout: auto;
+    width: 100%; 
+}
+
+.webTable  td, #webTable  th {
+    border: 1px solid #ddd;
+    padding: 1px;
+}
+
+.webTable  tr:nth-child(even){background-color: #f2f2f2;}
+
+.webTable  tr:hover {background-color: #ddd;}
+
+.webTable  th {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    text-align: left;
+    background-color: #4CAF50; /*green*/
+    color: white;
+}
+/*end of table css*/
+
+body {
+    background-color:#FFF;
+	color:#000;
+	font-family:Verdana,Geneva,Arial,Helvetica,sans-serif;
+    font-size:10pt;
+}
+
+/*blocks float and rearrange based on screen size*/
+.largefloating-box {
+	border: solid;
+    border-color: #ffdf9c;
+    border-radius: 15px;    
+	display: inline-block;
+	padding: 10px 20px 10px 20px; /*top right bottom left*/
+    width: 90%;
+    margin: 10px;
+}
+.smallfloating-box {
+	border: solid;
+    border-color: #ffdf9c;
+    border-radius: 15px;    
+	display: inline-block;
+	padding: 10px 20px 10px 20px; /*top right bottom left*/
+    width: 25%;
+    margin: 10px;
+}
+/*container, section and aside - use together to float large and small boxes side by side*/
+.container {
+  width: 100%;
+}
+.counter {
+  float: right;
+}
+section,
+aside {
+  margin: 1.858736059%; /*  10px ÷ 538px = .018587361 */
+}
+section {
+  float: left;
+  width: 63.197026%;    /* 340px ÷ 538px = .63197026 */   
+}
+aside {
+  float: right;
+  width: 29.3680297%;  /* 158px ÷ 538px = .293680297 */
+}
+
+/*OWT standard button - create ids for different colours*/
+button {
+  background-color: #FFA500;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 6px #999;
+  color: #000000;
+  cursor: pointer;
+  font-size: 18px;
+  outline: none;
+  padding: 5px 15px;
+  text-align: center;
+}	
+
+#div-checklist {
+	float: left;
+	margin: 0 0 0px 0px;
+	padding: 10px 10px 10px 10px; /*top right bottom left*/
+    text-align: left;
+	width: 100%;	
+}	
+
+#div-comments {
+	float: left;
+	margin: 0 0 10px 30px;
+	padding: 10px 20px 10px 0px; /*top right bottom left*/
+    text-align: center;
+	width: 100%;	
+}	
+
+#div-border{
+	border: solid;
+    border-color: #ffdf9c;
+    border-radius: 15px;
+}
+
+#div-fivebullets{
+	border: solid;
+    border-color: #ffdf9c;
+    border-radius: 15px;
+	float: left;
+	margin: 0 0 10px 10px;
+	padding: 30px 10px 30px 10px; /*top right bottom left*/
+    text-align: left;
+}
+#section-hopes {
+    background-color: #fefda0;
+    float: left;
+	margin: 10px;
+	padding: 10px;
+}
+
+#section-fear {
+    background-color: #fefda0;
+    float: left;
+	margin: 10px;
+    padding: 10px;
+}
+
+#div-image {
+    float: left;
+    width: 120px;
+    margin: 10px 10px  10px  10px;
+    padding: 15px;
+    border: 1px #fefda0;
+    text-align: center;
+}
+#div-music {
+  float: left;
+  height: 0;
+  padding-bottom: 56.25%; /* 16:9 */
+  margin: 10px 10px 10px 10px; /*top right bottom left*/
+  position: relative;
+  width: 100%;
+}
+/*iframe {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}*/
+
+.nobull {
+list-style-type: none;
+}
+
+header, footer {
+    background-color:  #000000;
+    clear: left;
+	color: #FFA500;
+    padding: 1em;
+    text-align: center;
+}
+
+#wordcloud-img {
+  display: block;
+  width: auto;
+  height: auto;
+  max-width: 90%;
+  max-height: 90%;
+  margin: 15px auto;
+}
+/*img {
+    float: left;
+    margin: 0px 5px 0px 0px;
+}*/
+/*responsive nagivation menu*/
+ul.sidenav {
+    list-style-type: none;
+    margin: 0;
+	padding: 0;
+    width: 25%;
+    background-color: #f1f1f1;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+}
+
+ul.sidenav li a {
+    display: block;
+    color: #000;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+ 
+ul.sidenav li a.active {
+    background-color: #f28500;
+    color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+    background-color: #555;
+    color: white;
+}
+
+div.content {
+    margin-left: 25%;
+    padding: 1px 16px;
+    height: 1000px;
+}
+
+@media screen and (max-width: 1050px){
+    ul.sidenav {
+        width:100%;
+        height:auto;
+        position:relative;
+    }
+    ul.sidenav li a {
+        float: left;
+        padding: 15px;
+    }
+    div.content {margin-left:0;}
+}
+
+@media screen and (max-width: 400px){
+    ul.sidenav li a {
+        text-align: center;
+        float: none;
+    }
+}
+@media all and (max-width: 400px) {
+  section, aside {
+    float: none;
+    width: auto;
+  }
+}
+/*tweak form layout*/
+/*need to remove bullets and line up input boxes*/
+
+ul.form li{
+	clear: both;
+}
+form {
+ width: 40em;
+ border: 1px solid #666;
+ border-radius: 10px;
+ box-shadow: .2em .2em .5em #999;
+ background-color:#d0e9f6;
+ padding: 1em;
+ overflow: hidden;
+}
+/*label {
+ display: block;
+ float: left;
+ width: 10em;
+ text-align: right;
+ margin-right: .5em;
+ color: #04699d;
+}*/
+fieldset {
+ margin: 0;
+ padding: 0;
+ border: none;
+}
+legend {
+ display: block;
+ width: 10em;
+ float: left;
+ margin-right: .5em;
+ text-align: right;
+ color: #04699d;
+}
+#features label, #colors label {
+ color: #000;
+ display: inline;
+ float: none;
+ text-align: inherit;
+ width: auto;
+ font-weight: normal;
+ background-color: inherit;
+}
+#colors ul li {
+ display: inline;
+ margin-bottom: 0;
+}
+#features ul {
+ margin-left: 11em;
+}
+#features ul li {
+ margin-bottom: 0;
+ clear: none;
+}
+input.textinput {
+ width: 30em;
+ height: 2em;
+ border: 1px solid #666;
+}
+textarea {
+ display: block;
+ width: 30em;
+ height: 5em;
+ border: 1px solid #666;
+ margin-bottom: 1em;
+ line-height: 1.25;
+ overflow: auto;
+ resize: none;
+}
+input.textinput, textarea {
+ font-family: Georgia, "Times New Roman", Times, serif;
+ font-size: .875em;
+}
+
+input[type="submit"], input[type="reset"] {
+ display: block;
+ width: 10em;
+ height: 2em;
+ float: left;
+ background: white;
+ font-size: inherit;
+ border: 1px solid #04699d;
+ border-radius: 4px;
+ box-shadow: 2px 2px 3px rgba(0,0,0,.5);
+}
+
+input[type="submit"] {
+ margin-left: 10.5em;
+ margin-right: 1em;
+ color: #C00; /* the submit button text is attention-getting red */
+}
+<title>thesis</title>
